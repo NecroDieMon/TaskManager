@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a69ad69e28b4155be893381e67316be" Name="Diagram1">
+        <EntityTypeShape EntityType="TaskManagerDBModel.Notifications" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskManagerDBModel.Projects" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskManagerDBModel.Roles" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskManagerDBModel.Status" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskManagerDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskManagerDBModel.Tasks" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskManagerDBModel.Teams" Width="1.5" PointX="9.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskManagerDBModel.Users" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Notifications_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Projects_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Tasks_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Tasks_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Tasks_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Teams_Tasks" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskManagerDBModel.FK_Teams_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="TaskManager.TeamsEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Редактор команд" Height="450" Width="800" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="92*"/>
+            <ColumnDefinition Width="213*"/>
+            <ColumnDefinition Width="190*"/>
+            <ColumnDefinition Width="305*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="59*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="7" CornerRadius="0 30 30 0" Background="Snow">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="6"/>
+            </Border.Effect>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="0" Grid.RowSpan="7" CornerRadius="30 0 0 30" Background="Snow">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="6"/>
+            </Border.Effect>
+        </Border>
+        <TextBox x:Name="NameTeam" Grid.Column="0" Grid.Row="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Имя команды" FontSize="17" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Text="Участники:"/>
+        <ComboBox x:Name="UsersBox" Grid.Row="1" Grid.Column="1" Margin="10 0 10 0" SelectionChanged="UsersBox_SelectionChanged" DisplayMemberPath="Login" Loaded="UsersBox_Loaded"/>
+        <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Text="Задачи:"/>
+        <ComboBox x:Name="TasksBox" Grid.Row="2" Grid.Column="1" Margin="10 0 10 0" SelectionChanged="TasksBox_SelectionChanged" DisplayMemberPath="NameTask" Loaded="TasksBox_Loaded"/>
+        <Button x:Name="AddTeam" Grid.Row="3" Grid.Column="3" Content="Добавить" Height="40" Margin="20,11,20,11" Click="AddTeam_Click"/>
+        <Button x:Name="DeleteTeam" Grid.Row="4" Grid.Column="3" Content="Удалить" Height="40" Margin="20,11,20,11" Click="DeleteTeam_Click"/>
+        <Button x:Name="UpdateTeam" Grid.Row="5" Grid.Column="3" Content="Обновить" Height="40" Margin="20,11,20,11" Click="UpdateTeam_Click"/>
+        <Button x:Name="Back" Grid.Row="6" Content="назад" Height="40" Margin="20,11,20,11" Grid.ColumnSpan="2" Click="Back_Click"/>
+        <DataGrid x:Name="YourTeamsGrid" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" IsReadOnly="True" AutoGenerateColumns="False" SelectionChanged="YourTeamsGrid_SelectionChanged" Loaded="YourTeamsGrid_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=NameTeam}"/>
+                <DataGridTextColumn Header="Участник" Binding="{Binding Path=Users.Login}"/>
+                <DataGridTextColumn Header="Задача" Binding="{Binding Path=Tasks.NameTask}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

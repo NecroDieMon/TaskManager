@@ -1,0 +1,51 @@
+﻿<Window x:Class="TaskManager.PersonalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Личный кабинет" Height="450" Width="800" WindowState="Maximized" Loaded="Window_Loaded">
+    <Grid Background="#ffdadada">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="68*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="296*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2" Grid.RowSpan="5" CornerRadius="0 30 30 0" Background="Snow">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="6"/>
+            </Border.Effect>
+        </Border>
+        <Border Grid.Column="3" Grid.RowSpan="5" CornerRadius="30 0 0 30" Background="Snow">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="6"/>
+            </Border.Effect>
+        </Border>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Логин:"/>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Email:"/>
+        <TextBlock Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Ваши задачи"/>
+        <TextBlock x:Name="YourLogin" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="..."/>
+        <TextBlock x:Name="YourEmail" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="..."/>
+        <DataGrid x:Name="YourTasksGrid" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" IsReadOnly="True" AutoGenerateColumns="False" Loaded="YourTasksGrid_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=Tasks.NameTask}"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Path=Tasks.DescriptionTask}"/>
+                <DataGridTextColumn Header="Приоритет" Binding="{Binding Path=Tasks.Priority}"/>
+                <DataGridTextColumn Header="Комментарий" Binding="{Binding Path=Tasks.Comment}"/>
+                <DataGridTextColumn Header="Срок" Binding="{Binding Path=Tasks.Deadline}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Back" Grid.Row="4" Content="Назад" Height="40" Margin="10 0 10 0" Click="Back_Click"/>
+        <Button x:Name="OpenPasswordRecoveryWindow" Grid.Row="4" Grid.Column="1" Content="Сменить пароль" Height="40" Margin="10 0 10 0" Click="OpenPasswordRecoveryWindow_Click"/>
+    </Grid>
+</Window>
