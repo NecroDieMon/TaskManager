@@ -1,4 +1,3 @@
-# TaskManager
 <h1 style="text-align:center;">TaskManager</h1>
 <h2 style="text-align:center;">Менеджер задач</h2>
 
@@ -37,7 +36,7 @@
 
 <h3>Скриншоты проекта:</h3>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen1.png">
+	<img src = "Screenshots/Screen1.png">
 	<p align="center">Рисунок 1 - окно авторизации</p>
 </figure>
 <figure>
