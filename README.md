@@ -40,35 +40,35 @@
 	<p align="center">Рисунок 1 - окно авторизации</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen2.png">
+	<img src = "Screenshots/Screen2.png">
 	<p align="center">Рисунок 2 - окно регистрации</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen3.png">
+	<img src = "Screenshots/Screen3.png">
 	<p align="center">Рисунок 3 - окно изменения пароля</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen4.png">
+	<img src = "Screenshots/Screen4.png">
 	<p align="center">Рисунок 4 - главное меню</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen5.png">
+	<img src = "Screenshots/Screen5.png">
 	<p align="center">Рисунок 5 - личный кабинет</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen6.png">
+	<img src = "Screenshots/Screen6.png">
 	<p align="center">Рисунок 6 - окно управления задачами</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen7.png">
+	<img src = "Screenshots/Screen7.png">
 	<p align="center">Рисунок 7 - окно управления проектами</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen8.png">
+	<img src = "Screenshots/Screen8.png">
 	<p align="center">Рисунок 8 - окно управления командами</p>
 </figure>
 <figure>
-	<img src = "TaskManager/Screenshots/Screen9.png">
+	<img src = "Screenshots/Screen9.png">
 	<p align="center">Рисунок 9 - окно администратора</p>
 </figure>
 
