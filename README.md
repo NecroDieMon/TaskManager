@@ -68,7 +68,7 @@
 	<p align="center">Рисунок 8 - окно управления командами</p>
 </figure>
 <figure>
-	<img src = "Screenshots/Screen9.png">
+	<img src = "https://github.com/user-attachments/assets/c9ecc3eb-5a1d-4300-ac3a-75c09e045f74">
 	<p align="center">Рисунок 9 - окно администратора</p>
 </figure>
 
