@@ -32,9 +32,9 @@
         <DataGrid x:Name="UsersGrid" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2" IsReadOnly="True" AutoGenerateColumns="False" Loaded="UsersGrid_Loaded" SelectionChanged="UsersGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Логин" Binding="{Binding Path=Login}"/>
-                <DataGridTextColumn Header="Роль" Binding="{Binding Path=Password}"/>
-                <DataGridTextColumn Header="Пароль" Binding="{Binding Path=Email}"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Path=Roles.NameRole}"/>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Path=Password}"/>
+                <DataGridTextColumn Header="Почта" Binding="{Binding Path=Email}"/>
+                <DataGridTextColumn Header="Роль" Binding="{Binding Path=Roles.NameRole}"/>
             </DataGrid.Columns>
         </DataGrid>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Роль:" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,11,0,0"/>
